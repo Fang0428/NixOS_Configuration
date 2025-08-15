@@ -6,6 +6,7 @@
       ./hardware-configuration.nix
       
       ./modules/fish.nix
+      ./modules/ssh.nix
       ./modules/excludepkgs.nix
       ./modules/auto_cpufreq.nix
       ./modules/boot.nix
@@ -35,7 +36,6 @@
     hostName = "ThinkPad_P1_Gen2";
     networkmanager.enable = true;
     nftables.enable = true;
-    networkmanager.wifi.backend = "iwd";
   };
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
