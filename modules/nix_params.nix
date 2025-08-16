@@ -1,7 +1,10 @@
 { config, lib, pkgs, ... }:
 
 {
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (lib.getName pkg) [
+      "nvidia-x11"
+    ];
   
   nix.gc = {
     automatic = true;

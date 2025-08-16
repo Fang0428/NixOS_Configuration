@@ -54,7 +54,6 @@
     keepassxc
     upscayl
     librecad
-    drawio
     doit
     rnote
     friture
