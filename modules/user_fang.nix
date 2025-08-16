@@ -58,7 +58,6 @@
     doit
     rnote
     friture
-    gitqlient
     converseen
     freecad
     stellarium

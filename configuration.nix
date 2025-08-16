@@ -44,19 +44,16 @@
   time.timeZone = "Australia/Sydney";
 
   environment.sessionVariables = {
-    # General Wayland Toolkit Backends 
-    GDK_BACKEND = "wayland";
-    SDL_VIDEODRIVER = "wayland";
-    CLUTTER_BACKEND = "wayland";
-    QT_QPA_PLATFORM = "wayland";
-
-    # Application Specific
     NIXOS_OZONE_WL = "1";
   };
 
   programs.gamemode.enable = true;
   programs.localsend.enable = true;
-  programs.firejail.enable = true;
+  programs.lazygit.enable = true;
+  
+  programs.firefox = {
+    enable = true;
+  };
   
   programs.appimage = {
     enable = true;
@@ -131,10 +128,6 @@
     enable = true;
     package = pkgs.ananicy-cpp;
     rulesProvider = pkgs.ananicy-rules-cachyos;
-  };
-  
-  programs.firefox = {
-    enable = true;
   };
   
   # This value determines the NixOS release from which the default
