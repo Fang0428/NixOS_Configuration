@@ -20,6 +20,7 @@
       ps.collection-fontsrecommended
       ps.collection-langchinese
     ]))
+    (mkIf config.devWorkbench.enable config.devWorkbench.portal)
     # denaro
     # natron
     # quarto

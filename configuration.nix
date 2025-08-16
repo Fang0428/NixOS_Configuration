@@ -6,6 +6,7 @@
       ./hardware-configuration.nix
       
       ./modules/fish.nix
+      ./modules/dev_workbench.nix
       ./modules/ssh.nix
       ./modules/excludepkgs.nix
       ./modules/auto_cpufreq.nix
@@ -27,6 +28,8 @@
     fsType = "tmpfs";
     options = [ "size=8G" "mode=0700" "uid=1000" "gid=100" ];
   };
+  
+  devWorkbench.enable = true;
   
   systemd.oomd.enable = true;
   documentation.doc.enable = false;
